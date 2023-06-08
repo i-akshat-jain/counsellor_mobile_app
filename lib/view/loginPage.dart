@@ -13,7 +13,8 @@ class LoginPage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             SizedBox(
-              height: MediaQuery.of(context).size.height * 0.4,
+              height: MediaQuery.of(context).size.height * 0.7,
+              width: MediaQuery.of(context).size.width * 0.9,
               child: SvgPicture.asset('assets/images/sweetSoundLogo.svg'),
             ),
             Padding(
@@ -40,7 +41,7 @@ class LoginPage extends StatelessWidget {
                   ),
                   SizedBox(height: 16.0),
                   Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.start,
                     children: [
                       TextButton(
                         onPressed: () {
