@@ -1,6 +1,7 @@
 import 'otpView.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:counsellor_mobile_app/view/signUp.dart';
 
 
 class LoginPage extends StatelessWidget {
@@ -30,7 +31,7 @@ class LoginPage extends StatelessWidget {
                   SizedBox(height: 16.0),
                   ElevatedButton(
                     onPressed: () {
-                     Navigator.push(
+                      Navigator.push(
                         context,
                         MaterialPageRoute(builder: (context) => OTPViewPage()),
                       );
@@ -43,13 +44,17 @@ class LoginPage extends StatelessWidget {
                     children: [
                       TextButton(
                         onPressed: () {
-                          // Handle create account button press
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => SignUpView()),
+                          );
                         },
                         child: Text('Create Account?'),
                       ),
                       TextButton(
                         onPressed: () {
-                          // Handle trouble in login button press
+                           
                         },
                         child: Text('Trouble in login?'),
                       ),
@@ -64,4 +69,3 @@ class LoginPage extends StatelessWidget {
     );
   }
 }
-
