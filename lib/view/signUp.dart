@@ -1,4 +1,5 @@
 import '../constants/inputBox.dart';
+import '../constants/nextPage.dart';
 import 'package:flutter/material.dart';
 import 'package:counsellor_mobile_app/view/personalRegisterView.dart';
 
@@ -16,7 +17,6 @@ class SignUpView extends StatelessWidget {
                 title: "Email Id/ Phone No",
                 hintText: "Enter your Email Id/ Phone No"),
             SizedBox(height: 16.0),
-            
             InputBox(
               title: "Password",
             ),
@@ -30,22 +30,9 @@ class SignUpView extends StatelessWidget {
             SizedBox(height: 16.0),
             Align(
               alignment: Alignment.centerLeft,
-              child: TextButton(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => PersonalRegistrationViewPage()),
-                  );
-                  // Handle already registered button press
-                },
-                child: Text(
-                  'Already Registered?',
-                  style: TextStyle(
-                    fontSize: 14.0,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
+              child: NextPageButton(
+                nextPage: PersonalRegistrationViewPage(),
+                text: 'Already Registered?',
               ),
             ),
           ],

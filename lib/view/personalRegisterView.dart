@@ -4,6 +4,8 @@ import 'package:flutter_svg/svg.dart';
 import 'package:flutter/material.dart';
 import '../constants/radioOptions.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:counsellor_mobile_app/view/help.dart';
+
 
 
 class PersonalRegistrationViewPage extends StatefulWidget {
@@ -191,9 +193,13 @@ class _PersonalRegistrationViewPage
               widthFactor: 1.0,
               child: ElevatedButton(
                 onPressed: () {
-                  // Handle registration button press
+                 Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => HelpView()),
+                  );
                 },
-                child: Text('Register'),
+                child: Text('Continue'),
               ),
             ),
           ],

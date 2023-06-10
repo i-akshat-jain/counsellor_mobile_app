@@ -1,4 +1,5 @@
 import 'otpView.dart';
+import '../constants/nextPage.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:counsellor_mobile_app/view/signUp.dart';
@@ -43,15 +44,9 @@ class LoginPage extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
-                      TextButton(
-                        onPressed: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => SignUpView()),
-                          );
-                        },
-                        child: Text('Create Account?'),
+                      NextPageButton(
+                        nextPage: SignUpView(),
+                        text: 'Create Account?',
                       ),
                       TextButton(
                         onPressed: () {
