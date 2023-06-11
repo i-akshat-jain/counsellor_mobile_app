@@ -1,5 +1,6 @@
 import 'package:flutter_svg/svg.dart';
 import 'package:flutter/material.dart';
+import 'package:counsellor_mobile_app/view/musicView.dart';
 import 'package:counsellor_mobile_app/constants/colors.dart';
 
 class ProfilePersonal extends StatefulWidget {
@@ -41,18 +42,36 @@ class _ProfilePersonalState extends State<ProfilePersonal> {
                         Column(
                           children: [
                             ElevatedButton(
-                              onPressed: () {},
+                              onPressed: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => SongBarView()),
+                                );
+                              },
                               child: Column(
                                 children: [
-                                  Icon(Icons.headset),
+                                  Icon(Icons.headset, color: Colors.black,),
                                   SizedBox(height: 8.0),
                                 ],
                               ),
-                              style: ElevatedButton.styleFrom(
-                                minimumSize: Size(61, 60),
+                              style: ButtonStyle(
+                                 minimumSize: MaterialStateProperty.all(Size(61, 60)),
+                                elevation:
+                                    MaterialStateProperty.resolveWith<double>(
+                                        (states) {
+                                  // Set the elevation to a non-zero value when the button is pressed
+                                  return states.contains(MaterialState.pressed)
+                                      ? 8.0
+                                      : 0.0;
+                                }),
+                               backgroundColor:
+                                    MaterialStateProperty.all<Color?>(
+                                        Colors.white),
                               ),
                             ),
-                            Text("Listen")
+                            SizedBox(height: 5),
+                            Text("Music")
                           ],
                         ),
                         Column(
@@ -61,15 +80,61 @@ class _ProfilePersonalState extends State<ProfilePersonal> {
                               onPressed: () {},
                               child: Column(
                                 children: [
-                                  Icon(Icons.chat),
+                                  Icon(Icons.chat, color: Colors.black,),
                                   SizedBox(height: 8.0),
                                 ],
                               ),
-                              style: ElevatedButton.styleFrom(
-                                minimumSize: Size(61, 60),
+                              style: ButtonStyle(
+                                 minimumSize: MaterialStateProperty.all(Size(61, 60)),
+                                elevation:
+                                    MaterialStateProperty.resolveWith<double>(
+                                        (states) {
+                                  // Set the elevation to a non-zero value when the button is pressed
+                                  return states.contains(MaterialState.pressed)
+                                      ? 8.0
+                                      : 0.0;
+                                }),
+                               backgroundColor:
+                                    MaterialStateProperty.all<Color?>(
+                                        Colors.white),
                               ),
                             ),
-                            Text("Chat")
+                            SizedBox(height: 5),
+                            Text("Message")
+                          ],
+                        ),
+
+                        Column(
+                          children: [
+                            ElevatedButton(
+                              onPressed: () {},
+                              child: Column(
+                                children: [
+                                  Icon(
+                                    Icons.chat,
+                                    color: Colors.black,
+                                  ),
+                                  SizedBox(height: 8.0),
+                                ],
+                              ),
+                              style: ButtonStyle(
+                                minimumSize:
+                                    MaterialStateProperty.all(Size(61, 60)),
+                                elevation:
+                                    MaterialStateProperty.resolveWith<double>(
+                                        (states) {
+                                  // Set the elevation to a non-zero value when the button is pressed
+                                  return states.contains(MaterialState.pressed)
+                                      ? 8.0
+                                      : 0.0;
+                                }),
+                                backgroundColor:
+                                    MaterialStateProperty.all<Color?>(
+                                        Colors.white),
+                              ),
+                            ),
+                            SizedBox(height: 5),
+                            Text("Message")
                           ],
                         ),
                         Column(
@@ -78,15 +143,31 @@ class _ProfilePersonalState extends State<ProfilePersonal> {
                               onPressed: () {},
                               child: Column(
                                 children: [
-                                  Icon(Icons.call),
+                                  Icon(
+                                    Icons.chat,
+                                    color: Colors.black,
+                                  ),
                                   SizedBox(height: 8.0),
                                 ],
                               ),
-                              style: ElevatedButton.styleFrom(
-                                minimumSize: Size(61, 60),
+                              style: ButtonStyle(
+                                minimumSize:
+                                    MaterialStateProperty.all(Size(61, 60)),
+                                elevation:
+                                    MaterialStateProperty.resolveWith<double>(
+                                        (states) {
+                                  // Set the elevation to a non-zero value when the button is pressed
+                                  return states.contains(MaterialState.pressed)
+                                      ? 8.0
+                                      : 0.0;
+                                }),
+                                backgroundColor:
+                                    MaterialStateProperty.all<Color?>(
+                                        Colors.white),
                               ),
                             ),
-                            Text("Call")
+                            SizedBox(height: 5),
+                            Text("Message")
                           ],
                         ),
                         Column(
@@ -95,38 +176,36 @@ class _ProfilePersonalState extends State<ProfilePersonal> {
                               onPressed: () {},
                               child: Column(
                                 children: [
-                                  Icon(Icons.video_call),
+                                  Icon(
+                                    Icons.chat,
+                                    color: Colors.black,
+                                  ),
                                   SizedBox(height: 8.0),
                                 ],
                               ),
-                              style: ElevatedButton.styleFrom(
-                                minimumSize: Size(61, 60),
+                              style: ButtonStyle(
+                                minimumSize:
+                                    MaterialStateProperty.all(Size(61, 60)),
+                                elevation:
+                                    MaterialStateProperty.resolveWith<double>(
+                                        (states) {
+                                  // Set the elevation to a non-zero value when the button is pressed
+                                  return states.contains(MaterialState.pressed)
+                                      ? 8.0
+                                      : 0.0;
+                                }),
+                                backgroundColor:
+                                    MaterialStateProperty.all<Color?>(
+                                        Colors.white),
                               ),
                             ),
-                            Text("Video Call")
-                          ],
-                        ),
-                        Column(
-                          children: [
-                            ElevatedButton(
-                              onPressed: () {},
-                              child: Column(
-                                children: [
-                                  Icon(Icons.live_tv),
-                                  SizedBox(height: 8.0),
-                                ],
-                              ),
-                              style: ElevatedButton.styleFrom(
-                                minimumSize: Size(61, 60),
-                              ),
-                            ),
-                            Text("Live")
+                            SizedBox(height: 5),
+                            Text("Message")
                           ],
                         ),
                       ],
                     ),
                   ),
-                  
                 ],
               ),
             ),
@@ -146,31 +225,6 @@ class _ProfilePersonalState extends State<ProfilePersonal> {
                 textAlign: TextAlign.center,
               ),
             ),
-          ),
-        ],
-      ),
-      bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: AppColors.darkPink,
-        selectedItemColor: Colors.white,
-        unselectedItemColor: Colors.grey,
-        currentIndex: _currentIndex,
-        onTap: (int index) {
-          setState(() {
-            _currentIndex = index;
-          });
-        },
-        items: [
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: 'Home',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.search),
-            label: 'Search',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.settings),
-            label: 'Settings',
           ),
         ],
       ),

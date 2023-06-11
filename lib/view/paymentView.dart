@@ -1,4 +1,5 @@
 import 'help.dart';
+import 'bottomNavigator.dart';
 import '../constants/colors.dart';
 import '../constants/inputBox.dart';
 import 'package:flutter_svg/svg.dart';
@@ -96,7 +97,7 @@ class PaymentView extends StatelessWidget {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => ProfilePersonal()),
+                                builder: (context) => BottomNavigatorView()),
                           );
                         },
                         child: Text('Continue',
@@ -115,7 +116,7 @@ class PaymentView extends StatelessWidget {
                         onPressed: () {
                           Navigator.push(
                             context,
-                            MaterialPageRoute(builder: (context) => HelpView()),
+                            MaterialPageRoute(builder: (context) => BottomNavigatorView()),
                           );
                         },
                         child: Text(
