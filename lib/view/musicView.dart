@@ -39,6 +39,7 @@ class SongBarView extends StatelessWidget {
         },
 
 
+
       ),
     );
   }
