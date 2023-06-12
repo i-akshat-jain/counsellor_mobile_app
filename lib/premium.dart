@@ -7,22 +7,23 @@ class PremiumMembershipPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SingleChildScrollView(
-        padding: EdgeInsets.all(16.0),
+        padding: EdgeInsets.all(30.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Row(
+              
               children: [
-            Icon(Icons.star, size: 26, color: Colors.black),
-
-                SizedBox(width: 8),
-                Text('Premium', style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold)),
+                Padding(padding: EdgeInsets.only(top: 20,bottom: 20)),
+                Icon(Icons.star, size: 20, color: Color.fromRGBO(181, 53, 134, 1)),
+                SizedBox(width: 8,height: 16,),
+                Text('Premium', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Color.fromRGBO(181, 53, 134, 1),)),
               ],
             ),
             SizedBox(height: 16),
             Text(
               'Best plan for you',
-              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
             SizedBox(height: 16),
             Text(
@@ -30,9 +31,23 @@ class PremiumMembershipPage extends StatelessWidget {
               style: TextStyle(fontSize: 16),
             ),
             SizedBox(height: 16),
-           Row(
- 
+            Container(
+  decoration: BoxDecoration(
+    color: Colors.grey[200], // Adjust the color as needed
+    borderRadius: BorderRadius.circular(8),
+  ),
+  padding: EdgeInsets.all(16),
+  child: Column(
+    crossAxisAlignment: CrossAxisAlignment.start,
+    children: [
+      Row(
   children: [
+    Image.asset(
+      'assets/rupee.png',  // Replace with the correct path and filename
+      width: 22,
+      height: 16,
+    ),
+    SizedBox(width: 4),
     Text(
       '1500/-',
       style: TextStyle(
@@ -49,155 +64,170 @@ class PremiumMembershipPage extends StatelessWidget {
   ],
 ),
 
-            SizedBox(height: 16),
-            Text(
-  'Benefits',
-  style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
-),
-SizedBox(height: 8),
-Column(
-  crossAxisAlignment: CrossAxisAlignment.start,
-  children: [
-    Row(
-                  children: [
-                    Container(
-                      width: 15,
-                      height: 15,
-                      decoration: BoxDecoration(
-                        shape: BoxShape.circle,
-                        color: Colors.lightBlue,
-                      ),
-                      child: Icon(Icons.check, color: Colors.white, size: 16),
-                    ),
-                    SizedBox(width: 8),
-                    Text('Unlimited Talk Time'),
-                  ],
+      SizedBox(height: 16),
+      Text(
+        'Benefits :-',
+        style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Color.fromRGBO(181, 53, 134, 1),),
+      ),
+      SizedBox(height: 8),
+      Text(
+        'Included in your membership',
+        style: TextStyle(fontSize: 18),
+      ),
+      SizedBox(height: 8),
+      Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+            children: [
+              Container(
+                width: 15,
+                height: 15,
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  color: Colors.lightBlue,
                 ),
-                SizedBox(height: 6),
-                Row(
-                  children: [
-                    Container(
-                      width: 15,
-                      height: 15,
-                      decoration: BoxDecoration(
-                        shape: BoxShape.circle,
-                        color: Colors.lightBlue,
-                      ),
-                      child: Icon(Icons.check, color: Colors.white, size: 16),
-                    ),
-                    SizedBox(width: 8),
-                    Text('Unlimited Video Calls'),
-                  ],
+                child: Icon(Icons.check, color: Colors.white, size: 16),
+              ),
+              SizedBox(width: 8),
+              Text('Unlimited Talk Time'),
+            ],
+          ),
+          SizedBox(height: 6),
+          Row(
+            children: [
+              Container(
+                width: 15,
+                height: 15,
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  color: Colors.lightBlue,
                 ),
-                SizedBox(height: 6),
-    Row(
-      children: [
-        Container(
-                      width: 15,
-                      height: 15,
-                      decoration: BoxDecoration(
-                        shape: BoxShape.circle,
-                        color: Colors.lightBlue,
-                      ),
-                      child: Icon(Icons.check, color: Colors.white, size: 16),
-                    ),
-        SizedBox(width: 8),
-        Text('Provided by Top Rated Therapist'),
-      ],
-    ),
-    SizedBox(height: 6),
-    Row(
-      children: [
-        Container(
-                      width: 15,
-                      height: 15,
-                      decoration: BoxDecoration(
-                        shape: BoxShape.circle,
-                        color: Colors.lightBlue,
-                      ),
-                      child: Icon(Icons.check, color: Colors.white, size: 16),
-                    ),
-        SizedBox(width: 8),
-        Text('Messaging Anytime'),
-      ],
-    ),
-    SizedBox(height: 6),
-    Row(
-      children: [
-       Container(
-                      width: 15,
-                      height: 15,
-                      decoration: BoxDecoration(
-                        shape: BoxShape.circle,
-                        color: Colors.lightBlue,
-                      ),
-                      child: Icon(Icons.check, color: Colors.white, size: 16),
-                    ),
-        SizedBox(width: 8),
-        Text('Chat Sessions'),
-      ],
-    ),
-    SizedBox(height: 6),
-    Row(
-      children: [
-       Container(
-                      width: 15,
-                      height: 15,
-                      decoration: BoxDecoration(
-                        shape: BoxShape.circle,
-                        color: Colors.lightBlue,
-                      ),
-                      child: Icon(Icons.check, color: Colors.white, size: 16),
-                    ),
-        SizedBox(width: 8 ),
-        Text('Phone sessions'),
-      ],
-    ),
-    SizedBox(height: 6),
-    Row(
-      children: [
-       Container(
-                      width: 15,
-                      height: 15,
-                      decoration: BoxDecoration(
-                        shape: BoxShape.circle,
-                        color: Colors.lightBlue,
-                      ),
-                      child: Icon(Icons.check, color: Colors.white, size: 16),
-                    ),
-        SizedBox(width: 8),
-        Text('Video sessions'),
-      ],
-    ),
-  ],
-),
-SizedBox(height: 16),
-Row(
-  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-  children: [
-    Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Text('Original Cost'),
-        Text('Discount'),
-        Text('GST'),
-        Text('Total Amount', style: TextStyle(fontWeight: FontWeight.bold)),
-      ],
-    ),
-    Column(
-      crossAxisAlignment: CrossAxisAlignment.end,
-      children: [
-        Text('1800'),
-        Text('250'),
-        Text('50'),
-        Text('1500/-', style: TextStyle(fontWeight: FontWeight.bold)),
-      ],
-    ),
-  ],
+                child: Icon(Icons.check, color: Colors.white, size: 16),
+              ),
+              SizedBox(width: 8),
+              Text('Unlimited Video Calls'),
+            ],
+          ),
+          SizedBox(height: 6),
+          Row(
+            children: [
+              Container(
+                width: 15,
+                height: 15,
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  color: Colors.lightBlue,
+                ),
+                child: Icon(Icons.check, color: Colors.white, size: 16),
+              ),
+              SizedBox(width: 8),
+              Text('Provided by Top Rated Therapist'),
+            ],
+          ),
+          SizedBox(height: 6),
+          Row(
+            children: [
+              Container(
+                width: 15,
+                height: 15,
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  color: Colors.lightBlue,
+                ),
+                child: Icon(Icons.check, color: Colors.white, size: 16),
+              ),
+              SizedBox(width: 8),
+              Text('Messaging Anytime'),
+            ],
+          ),
+          SizedBox(height: 6),
+          Row(
+            children: [
+              Container(
+                width: 15,
+                height: 15,
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  color: Colors.lightBlue,
+                ),
+                child: Icon(Icons.check, color: Colors.white, size: 16),
+              ),
+              SizedBox(width: 8),
+              Text('Chat Sessions'),
+            ],
+          ),
+          SizedBox(height: 6),
+          Row(
+            children: [
+              Container(
+                width: 15,
+                height: 15,
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  color: Colors.lightBlue,
+                ),
+                child: Icon(Icons.check, color: Colors.white, size: 16),
+              ),
+              SizedBox(width: 8),
+              Text('Phone sessions'),
+            ],
+          ),
+          SizedBox(height: 6),
+          Row(
+            children: [
+              Container(
+                width: 15,
+                height: 15,
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  color: Colors.lightBlue,
+                ),
+                child: Icon(Icons.check, color: Colors.white, size: 16),
+              ),
+              SizedBox(width: 8),
+              Text('Video sessions'),
+            ],
+          ),
+        ],
+      ),
+    ],
+  ),
 ),
 
-            SizedBox(height: 24),
+            SizedBox(height: 16),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text('Original Cost'),
+                    SizedBox(height: 10),
+                    Text('Discount'),
+                    SizedBox(height: 10),
+                    Text('GST'),
+                    SizedBox(height: 10),
+                    Text('Total Amount', style: TextStyle(fontWeight: FontWeight.bold)),
+                  ],
+                ),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.end,
+                  children: [
+                    Text('1800'),
+                    SizedBox(height: 10),
+                    Text('250'),
+                    SizedBox(height: 10),
+                    Text('50'),
+                    SizedBox(height: 10),
+                    Text('1500/-', style: TextStyle(fontWeight: FontWeight.bold)),
+                  ],
+                ),
+              ],
+            ),
+            SizedBox(height: 20),
             Container(
+               height: 40,
               decoration: BoxDecoration(
                 color: Colors.lightBlueAccent,
                 borderRadius: BorderRadius.circular(24),
@@ -215,21 +245,22 @@ Row(
                 ],
               ),
             ),
-            SizedBox(height: 24),
+            SizedBox(height: 18),
             Container(
               width: double.infinity,
+              height: 40,
               decoration: BoxDecoration(
                 color: Colors.grey[300],
                 borderRadius: BorderRadius.circular(24),
               ),
-              padding: EdgeInsets.symmetric(vertical: 8),
+              padding: EdgeInsets.symmetric(vertical: 1),
               child: TextButton(
                 onPressed: () {
                   // Maybe Later button logic
                 },
                 child: Text(
                   'Maybe Later',
-                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold,color: Colors.black),
+                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: Colors.black),
                 ),
               ),
             ),
@@ -272,16 +303,13 @@ class MessengerBottomNavigationBar extends StatelessWidget {
               // Handle profile icon button press
             },
           ),
-     BottomNavItem(
-  icon: IconData(Icons.king_bed.codePoint, fontFamily: Icons.king_bed.fontFamily, fontPackage: Icons.king_bed.fontPackage),
-  label: 'Premium',
-  onPressed: () {
-    // Handle premium icon button press
-  },
-),
-
-
-
+          BottomNavItem(
+            icon:Icons.star, 
+            label: 'Premium',
+            onPressed: () {
+              // Handle premium icon button press
+            },
+          ),
         ],
       ),
     );

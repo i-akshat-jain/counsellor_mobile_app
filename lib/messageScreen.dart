@@ -1,3 +1,4 @@
+import 'package:chatapp/premium.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -88,20 +89,19 @@ class MessengerScreen extends StatelessWidget {
                       );
                     },
                     leading: CircleAvatar(
-                      child:
-                          Text('Sender'), // Replace with the sender's initials or profile picture
+                      child: Text(
+                          'Sender'), // Replace with the sender's initials or profile picture
                     ),
-                    title: Text(
-                        'Sender Name'), // Replace with the sender's name
+                    title:
+                        Text('Sender Name'), // Replace with the sender's name
                     subtitle: Text(
                         'This is a message'), // Replace with the message content
-                    trailing: Text(
-                        '12:34 PM'), // Replace with the message timestamp
+                    trailing:
+                        Text('12:34 PM'), // Replace with the message timestamp
                   );
                 },
               ),
             ),
-           
           ],
         ),
       ),
@@ -146,7 +146,10 @@ class MessengerBottomNavigationBar extends StatelessWidget {
             icon: Icons.star,
             label: 'Premium',
             onPressed: () {
-              // Handle premium icon button press
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => PremiumMembershipPage()));
             },
           ),
         ],
@@ -188,6 +191,7 @@ class BottomNavItem extends StatelessWidget {
     );
   }
 }
+
 class ChatScreen extends StatelessWidget {
   final String senderName;
 
@@ -197,7 +201,7 @@ class ChatScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-         backgroundColor: Color.fromRGBO(181, 53, 134, 1),
+        backgroundColor: Color.fromRGBO(181, 53, 134, 1),
         title: Row(
           children: [
             CircleAvatar(

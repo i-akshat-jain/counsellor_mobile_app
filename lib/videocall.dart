@@ -1,15 +1,15 @@
 import 'package:chatapp/premium.dart';
 import 'package:flutter/material.dart';
 
-class MostLikedPage extends StatelessWidget {
-  const MostLikedPage({Key? key}) : super(key: key);
+class VideoCallPage extends StatelessWidget {
+  const VideoCallPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Column(
         children: [
-  ClipRRect(
+           ClipRRect(
   borderRadius: BorderRadius.vertical(
     bottom: Radius.elliptical(
       MediaQuery.of(context).size.width * 0.95,
@@ -35,31 +35,22 @@ class MostLikedPage extends StatelessWidget {
         ),
       ),
       Positioned(
-        top: 0,
-        bottom: 0,
-        right: 0,
-        left: 200,
-        child: Image.asset('assets/bar.png'),
-      ),
-       Positioned(
         top: 90,
         bottom: 0,
         right: 0,
         left: 0,
-        child: Image.asset('assets/chat.png'),
+        child: Image.asset('assets/video.png'),
       ),
-      Positioned(
+       Positioned(
         top: 0,
         bottom: 0,
-        right: 200,
+        right: 0,
         left: 0,
-        child: Image.asset('assets/Vector.png'),
+        child: Image.asset('assets/wave.png'),
       ),
     ],
   ),
 ),
-
-
           Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -68,7 +59,7 @@ class MostLikedPage extends StatelessWidget {
                   padding: const EdgeInsets.symmetric(
                       vertical: 16.0, horizontal: 15),
                   child: Text(
-                    'Most Liked',
+                    'VideoCall',
                     style: TextStyle(
                       fontSize: 24,
                       fontWeight: FontWeight.bold,
@@ -115,7 +106,7 @@ class MostLikedPage extends StatelessWidget {
                 ],
               ),
               Spacer(),
-              Container(
+             Container(
   width: 35,
   height: 40,
   decoration: BoxDecoration(
@@ -126,11 +117,12 @@ class MostLikedPage extends StatelessWidget {
     ),
   ),
   child: Icon(
-    Icons.chat,
+    Icons.video_call,
     color: Color.fromRGBO(199, 35, 139, 1),
-    size: 20,
+    size: 24,
   ),
 ),
+
             ],
           ),
           subtitle: Row(
